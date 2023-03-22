@@ -7,6 +7,7 @@
   "version": "0.0.1",
   "aiKey": "",
   "repository": {
+    "type": "git",
     "url": "https://github.com/TaylorPMT/vscode-chatgpt"
   },
   "engines": {
@@ -228,7 +229,7 @@
         {
           "id": "vscode-chatgpt-view-container",
           "title": "ChatGPT",
-          "baseImagesUrl": "https://raw.githubusercontent.com/TaylorPMT/vscode-chatgpt/f260f26f5e228eda5c3294c4cb54db61f8cfd0dc/extension/images/openai-logo.svg"
+          "icon": "images/openai-logo.svg"
         }
       ]
     },
