@@ -2,7 +2,7 @@
   "name": "vscode-chatgpt",
   "publisher": "TaylorPMT",
   "displayName": "vscode-chatgpt",
-  "icon": "images/ai-logo.png",
+  "icon": "images/logo.png",
   "description": "vscode-chatgpt",
   "version": "3.9.7-0",
   "aiKey": "",
