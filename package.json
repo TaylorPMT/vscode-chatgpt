@@ -2,9 +2,9 @@
   "name": "vscode-chatgpt",
   "publisher": "TaylorPMT",
   "displayName": "vscode-chatgpt",
-  "icon": "images/logo.png",
+  "baseImagesUrl": "https://raw.githubusercontent.com/TaylorPMT/vscode-chatgpt/main/extension/images/logo.png",
   "description": "vscode-chatgpt",
-  "version": "3.9.7-0",
+  "version": "0.0.1",
   "aiKey": "",
   "repository": {
     "url": "https://github.com/TaylorPMT/vscode-chatgpt"
@@ -228,7 +228,7 @@
         {
           "id": "vscode-chatgpt-view-container",
           "title": "ChatGPT",
-          "icon": "images/openai-logo.svg"
+          "baseImagesUrl": "https://raw.githubusercontent.com/TaylorPMT/vscode-chatgpt/f260f26f5e228eda5c3294c4cb54db61f8cfd0dc/extension/images/openai-logo.svg"
         }
       ]
     },
