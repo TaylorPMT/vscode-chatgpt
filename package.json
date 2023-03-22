@@ -1,9 +1,9 @@
 {
-  "name": "vscode-chatgpt",
-  "publisher": "TaylorPMT",
-  "displayName": "vscode-chatgpt",
-  "baseImagesUrl": "https://raw.githubusercontent.com/TaylorPMT/vscode-chatgpt/main/extension/images/logo.png",
-  "description": "vscode-chatgpt",
+  "name": "TaylorPMT-chatgpt",
+  "publisher": "TaylorPMT-chatgpt",
+  "displayName": "TaylorPMT-chatgpt",
+  "icon": "images/logo.png",
+  "description": "TaylorPMT-chatgpt",
   "version": "0.0.1",
   "aiKey": "",
   "repository": {
