@@ -1,15 +1,15 @@
 {
   "name": "TaylorPMT-chatgpt",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TaylorPMT/vscode-chatgpt"
+  },
   "publisher": "TaylorPMT-chatgpt",
   "displayName": "TaylorPMT-chatgpt",
   "icon": "images/logo.png",
   "description": "TaylorPMT-chatgpt",
   "version": "0.0.1",
   "aiKey": "",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/TaylorPMT/vscode-chatgpt"
-  },
   "engines": {
     "vscode": "^1.73.0"
   },
