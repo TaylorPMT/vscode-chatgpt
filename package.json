@@ -7,7 +7,7 @@
   "publisher": "TaylorPMT-chatgpt",
   "displayName": "TaylorPMT-chatgpt",
   "icon": "images/logo.png",
-  "description": "TaylorPMT-chatgpt",
+  "description": "Your best AI pair programmer. A Visual Studio Code - ChatGPT Integration. Supports GPT-4, GPT3.5, GPT3 and Codex models. Create new files, view diffs with one click; your copilot to learn code, add tests, find bugs and more.",
   "version": "0.0.1",
   "aiKey": "",
   "engines": {
