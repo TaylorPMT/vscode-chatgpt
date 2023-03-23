@@ -276,6 +276,14 @@
             return;
         }
 
+        if (e.target?.id === "settings-api-key") {
+            e.preventDefault();
+            vscode.postMessage({
+                type: "openSettingApiKey"
+            });
+            return;
+        }
+
         if (e.target?.id === "settings-prompt-button") {
             e.preventDefault();
             vscode.postMessage({
