@@ -495,8 +495,8 @@
         const isBackground = checkImageExists(backgroundImage);
         if (isBackground) {
             const backgroundProps = {
-                'background-size': "contain",
-                'background-position': "center center",
+                'background-size': "cover",
+                'background-position': "top center",
                 'background-repeat': "no-repeat",
                 'background-attachment': "fixed",
                 '--bg-image': `url('${backgroundImage}')`
