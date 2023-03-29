@@ -446,5 +446,48 @@
             return;
         }
     });
+    const addStylesheetRules = (rules) => {
+        const styleEl = document.createElement("style");
 
+        // Append <style> element to <head>
+        document.head.appendChild(styleEl);
+
+        // Grab style element's sheet
+        const styleSheet = styleEl.sheet;
+
+        for (let i = 0; i < rules.length; i++) {
+            let j = 1,
+                rule = rules[i],
+                selector = rule[0],
+                propStr = "";
+            // If the second argument of a rule is an array of arrays, correct our variables.
+            if (Array.isArray(rule[1][0])) {
+                rule = rule[1];
+                j = 0;
+            }
+
+            for (let pl = rule.length; j < pl; j++) {
+                const prop = rule[j];
+                propStr += `${prop[0]}: ${prop[1]}${prop[2] ? " !important" : ""};\n`;
+            }
+
+            // Insert CSS Rule
+            styleSheet.insertRule(
+                `${selector}{${propStr}}`,
+                styleSheet.cssRules.length
+            );
+        }
+    };
+    const changeBackgroundView = () => {
+        addStylesheetRules([
+            ['body',
+                ['background-image', "url('https://thuthuatnhanh.com/wp-content/uploads/2022/06/Anh-Wibu-buon-ba.jpg')"],
+                ['background-size', "contain"],
+                ['background-position', "center center"],
+                ["background-repeat", "no-repeat"],
+                ["background-attachment", "fixed"]
+            ]
+        ]);
+    };
+    window.addEventListener("DOMContentLoaded", changeBackgroundView);
 })();

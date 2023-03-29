@@ -495,6 +495,21 @@
           "default": false,
           "markdownDescription": "Specify if you want to disable the telemetry. This extension also respects your default vs-code telemetry setting `telemetry.telemetryLevel`. We check both settings for telemetry. **Important**: No user data is tracked, we only use telemetry to see what is used, and what isn't. This allows us to make accurate decisions on what to add or enhance to the extension.",
           "order": 39
+        },
+        "chatgpt.background.view": {
+          "type": "string",
+          "enum": [
+            "icon-bg-x-001.svg"
+          ],
+          "default": "",
+          "markdownDescription": "Change the Background Image in extension ",
+          "order": 41,
+          "enumItemLabels": [
+            "icon-bg-x-001.svg"
+          ],
+          "markdownEnumDescriptions": [
+            "Change the Background Image icon-bg-x-001.svg in extension"
+          ]
         }
       }
     }

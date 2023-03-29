@@ -470,7 +470,6 @@ export default class ChatGptViewProvider implements vscode.WebviewViewProvider {
 	private getWebviewHtml(webview: vscode.Webview) {
 		const scriptUri = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, 'media', 'main.js'));
 		const stylesMainUri = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, 'media', 'main.css'));
-
 		const vendorHighlightCss = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, 'media', 'vendor', 'highlight.min.css'));
 		const vendorHighlightJs = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, 'media', 'vendor', 'highlight.min.js'));
 		const vendorMarkedJs = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, 'media', 'vendor', 'marked.min.js'));
@@ -478,7 +477,6 @@ export default class ChatGptViewProvider implements vscode.WebviewViewProvider {
 		const vendorTurndownJs = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, 'media', 'vendor', 'turndown.js'));
 
 		const nonce = this.getRandomId();
-
 		return `<!DOCTYPE html>
 			<html lang="en">
 			<head>
@@ -576,4 +574,6 @@ export default class ChatGptViewProvider implements vscode.WebviewViewProvider {
 		}
 		return text;
 	}
+
+
 }
