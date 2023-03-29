@@ -17,6 +17,7 @@ export default class ChatGptViewProvider implements vscode.WebviewViewProvider {
 	public chromiumPath?: string;
 	public profilePath?: string;
 	public model?: string;
+	public backgroundSetting?: String;
 
 	private apiGpt3?: ChatGPTAPI3;
 	private apiGpt35?: ChatGPTAPI35;
@@ -47,6 +48,7 @@ export default class ChatGptViewProvider implements vscode.WebviewViewProvider {
 		this.setProfilePath();
 		this.setProxyServer();
 		this.setAuthType();
+		this.setBackgroundView();
 	}
 
 	public resolveWebviewView(
@@ -163,6 +165,10 @@ export default class ChatGptViewProvider implements vscode.WebviewViewProvider {
 
 	public setProxyServer(): void {
 		this.proxyServer = vscode.workspace.getConfiguration("chatgpt").get("proxyServer");
+	}
+
+	public setBackgroundView(): void {
+		this.backgroundSetting = vscode.workspace.getConfiguration("chatgpt").get("background.view") || "";
 	}
 
 	public setMethod(): void {
@@ -475,7 +481,7 @@ export default class ChatGptViewProvider implements vscode.WebviewViewProvider {
 		const vendorMarkedJs = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, 'media', 'vendor', 'marked.min.js'));
 		const vendorTailwindJs = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, 'media', 'vendor', 'tailwindcss.3.2.4.min.js'));
 		const vendorTurndownJs = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, 'media', 'vendor', 'turndown.js'));
-
+		const backgroundView = this.backgroundSetting;
 		const nonce = this.getRandomId();
 		return `<!DOCTYPE html>
 			<html lang="en">
@@ -489,6 +495,7 @@ export default class ChatGptViewProvider implements vscode.WebviewViewProvider {
 				<script src="${vendorMarkedJs}"></script>
 				<script src="${vendorTailwindJs}"></script>
 				<script src="${vendorTurndownJs}"></script>
+				<script id="backgroundSetting" data-image="${backgroundView}"> </script>
 			</head>
 			<body class="overflow-hidden">
 				<div class="flex flex-col h-screen">

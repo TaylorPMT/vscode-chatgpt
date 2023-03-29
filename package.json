@@ -8,7 +8,7 @@
   "displayName": "TaylorPMT-chatgpt",
   "icon": "images/logo.png",
   "description": "Your best AI pair programmer. A Visual Studio Code - ChatGPT Integration. Supports GPT-4, GPT3.5, GPT3 and Codex models. Create new files, view diffs with one click; your copilot to learn code, add tests, find bugs and more.",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "aiKey": "",
   "engines": {
     "vscode": "^1.73.0"
@@ -498,18 +498,8 @@
         },
         "chatgpt.background.view": {
           "type": "string",
-          "enum": [
-            "icon-bg-x-001.svg"
-          ],
-          "default": "",
-          "markdownDescription": "Change the Background Image in extension ",
-          "order": 41,
-          "enumItemLabels": [
-            "icon-bg-x-001.svg"
-          ],
-          "markdownEnumDescriptions": [
-            "Change the Background Image icon-bg-x-001.svg in extension"
-          ]
+          "markdownDescription": "Setting a background image url in extension",
+          "order": 40
         }
       }
     }

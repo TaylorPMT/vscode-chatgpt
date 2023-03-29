@@ -7,14 +7,22 @@
 			"group": "build",
 			"problemMatcher": "$esbuild-watch",
 			"isBackground": true,
-			"label": "npm: watch",
+			"label": "npm: watch"
 		},
 		{
 			"type": "npm",
 			"script": "build",
 			"group": "build",
 			"problemMatcher": "$esbuild",
-			"label": "npm: build",
+			"label": "npm: build"
+		},
+		{
+			"type": "npm",
+			"script": "esbuild-base",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: esbuild-base",
+			"detail": "esbuild ./src/extension.ts --bundle --outfile=out/extension.js --external:vscode --format=cjs --platform=node"
 		}
 	]
 }

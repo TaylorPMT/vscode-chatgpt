@@ -478,16 +478,31 @@
             );
         }
     };
+    const checkImageExists = (imageUrl) => {
+        return new Promise(function (resolve, reject) {
+            var img = new Image();
+            img.onload = function () { resolve(true); };
+            img.onerror = function () { resolve(false); };
+            img.src = imageUrl;
+        });
+    };
+
+
     const changeBackgroundView = () => {
-        addStylesheetRules([
-            ['body',
-                ['background-image', "url('https://thuthuatnhanh.com/wp-content/uploads/2022/06/Anh-Wibu-buon-ba.jpg')"],
-                ['background-size', "contain"],
-                ['background-position', "center center"],
-                ["background-repeat", "no-repeat"],
-                ["background-attachment", "fixed"]
-            ]
-        ]);
+        // Use the configuration object to obtain some value
+        const backgroundSetting = document.getElementById('backgroundSetting');
+        const backgroundImage = backgroundSetting.getAttribute('data-image');
+        const isBackground = checkImageExists(backgroundImage);
+        if (isBackground) {
+            const backgroundProps = {
+                'background-size': "contain",
+                'background-position': "center center",
+                'background-repeat': "no-repeat",
+                'background-attachment': "fixed",
+                '--bg-image': `url('${backgroundImage}')`
+            };
+            addStylesheetRules([["body", Object.entries(backgroundProps)]]);
+        }
     };
     window.addEventListener("DOMContentLoaded", changeBackgroundView);
-})();
+})();;

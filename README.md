@@ -71,6 +71,20 @@ To **reset the conversation context**, click `ctrl+shift+p` and select `ChatGPT:
 
 Please note that this extension is currently a proof of concept and may have some limitations or bugs. We welcome feedback and contributions to improve the extension.
 
+## Setting a background image url in extension
+
+To set a background image URL in your Visual Studio Code extension, you will first need to modify your settings.json file.
+
+Open your extension folder
+Navigate to your .vscode folder
+Open your settings.json file
+In this file, add the following code:
+
+"chatgpt.background.view": "your-image-url-here"
+Replace your-image-url-here with the URL of the image you want to use as your background.
+
+To reload VSCode after making changes to this file, you can either close and reopen the application.
+
 ## Credits
 
 - This wouldn't be possible without OpenAI's [ChatGPT](https://chat.openai.com/chat)

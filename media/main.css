@@ -4,6 +4,7 @@
     --input-padding-horizontal: 4px;
     --input-margin-vertical: 4px;
     --input-margin-horizontal: 0;
+    --bg-image: url('../images/openai-logo.svg')
 }
 
 body {
@@ -13,6 +14,7 @@ body {
     font-weight: var(--vscode-font-weight);
     font-family: var(--vscode-font-family);
     background-color: var(--vscode-editor-background);
+    background-image: var(--bg-image);
 }
 
 ol,
